@@ -28,7 +28,7 @@ Available Keystroke
 | --------- | --------------------------------------------------- |
 | \g        | Show the nvim-tree                                  |
 | \s        | Enter NeoGit panel                                  |
-| \r        | Run the curl request when filetype is \*.http       |
+| \r        | Run the curl request when filetype is `\*.http`     |
 | \tb       | Telescope search buffer                             |
 | \tc       | Telescope search available commands in nvim         |
 | \tg       | Telescope search git files                          |
@@ -36,9 +36,9 @@ Available Keystroke
 | \tl       | Telescope live grep mode search on cwd              |
 | \ts       | Telescope grep string (string contains in files)    |
 | \tt       | Telescope file browser                              |
-| <space>u  | Unfold current buffer                               |
-| <space>f  | Fold current buffer                                 |
-| <space>g  | Preview git changes on current buffer               |
+| \<space>u | Unfold current buffer                               |
+| \<space>f | Fold current buffer                                 |
+| \<space>g | Preview git changes on current buffer               |
 | gO        | Add blank line before current line (normal mode)    |
 | go        | Add blank line below current line (normal mode)     |
 | zm        | Fold text by adding fold level by 1                 |
