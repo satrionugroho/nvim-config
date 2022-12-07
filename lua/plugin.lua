@@ -220,3 +220,15 @@ use {
     'tpope/vim-repeat'
   }
 }
+
+use {
+  'rest-nvim/rest.nvim',
+  opt = true,
+  requires = { 'nvim-lua/plenary.nvim' },
+  config = function()
+    require('config.rest-nvim')
+  end,
+}
+
+-- stay in end of file
+require('language-specific')

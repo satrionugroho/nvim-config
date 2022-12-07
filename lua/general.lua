@@ -30,6 +30,7 @@ keymap('n', '<space>u', ':set foldlevel=20<cr>', opts)
 keymap('n', '<space>f', ':set foldlevel=0<cr>', opts)
 keymap('n', '<leader>g', ':Neotree toggle<cr>:set foldlevel=20<cr>', opts)
 keymap('n', '<leader>s', ':Neogit<cr>:set foldlevel=20<cr>', opts)
+keymap('n', '<Leader>r', ":lua require('rest-nvim').run()<CR>", { noremap = true, silent = true, desc = 'Running rest client' })
 
 exec([[
   set nowrap
