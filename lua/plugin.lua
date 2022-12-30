@@ -206,6 +206,18 @@ use {
       }
     })
     vim.api.nvim_command('colorscheme catppuccin-macchiato')
+    local elixirGrp = vim.api.nvim_create_augroup('ElixirGroup', { clear = true })
+    vim.api.nvim_create_autocmd('BufRead', {
+      pattern = filetype,
+      callback = function()
+        vim.api.nvim_exec([[
+        set filetype=elixir
+        set foldlevel=1
+        PackerLoad vim-elixir
+      ]], true)
+      end,
+      group = elixirGrp,
+    })
   end,
   as = 'catppuccin'
 }
