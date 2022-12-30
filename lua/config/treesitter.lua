@@ -1,11 +1,11 @@
 require('nvim-treesitter.configs').setup({
-  ensure_installed = { 'go', 'elixir', 'ruby', 'javascript', 'eex', 'css', 'erlang', 'heex', 'html', 'sql', 'tsx', 'vim', 'yaml' },
+  ensure_installed = { 'go', 'elixir', 'ruby', 'javascript', 'eex', 'css', 'erlang', 'heex', 'html', 'sql', 'tsx', 'vim', 'yaml', 'org' },
   auto_install = true,
   autotag = {
     enable = true,
     filetypes = {
       'html', 'javascript', 'typescript', 'javascriptreact', 'typescriptreact', 'tsx', 'jsx',
-      'markdown',
+      'markdown', 'org',
       'heex', 'leex', 'sface'
     }
   },
@@ -17,7 +17,9 @@ require('nvim-treesitter.configs').setup({
     enable = true,
   },
   highlight = {
-    enable = true
+    enable = true,
+    disable = { 'org' },
+    additional_vim_regex_highlighting = { 'org' }
   },
   indent = {
     enable = true

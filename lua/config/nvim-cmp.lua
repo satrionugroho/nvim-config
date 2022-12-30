@@ -11,7 +11,7 @@ end
 
 cmp.setup({
   snippet = {
-    expand = function()
+    expand = function(args)
       vim.fn["vsnip#anonymous"](args.body)
     end
   },
@@ -55,6 +55,8 @@ cmp.setup({
     { name = 'buffer' },
   }, {
     { name = 'buffer' },
+  }, {
+    { name = 'orgmode' },
   })
 })
 

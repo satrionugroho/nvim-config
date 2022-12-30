@@ -6,7 +6,11 @@ telescope.setup {
     layout_strategy = 'flex',
     layout_config = { anchor = 'N' },
     scroll_strategy = 'cycle',
-    theme = require('telescope.themes').get_dropdown { layout_config = { prompt_position = 'top' } }
+    theme = require('telescope.themes').get_dropdown({
+      layout_config = {
+        prompt_position = 'top',
+      }
+    })
   },
   extensions = {
     ['ui-select'] = {
@@ -34,7 +38,6 @@ telescope.setup {
     buffers = {
       ignore_current_buffer = true,
       sort_lastused = true,
-      previewer = true
     }
   }
 }

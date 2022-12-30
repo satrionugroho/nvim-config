@@ -1,10 +1,11 @@
-local map = vim.api.nvim_set_keymap
+local map = vim.keymap.set
 local silent = { noremap = true, silent = true }
+local builtin = require('telescope.builtin')
 
-map('n', '<leader>tb', [[<cmd>Telescope buffers show_all_buffers=true theme=get_dropdown<cr>]], silent)
-map('n', '<leader>tc', [[<cmd>Telescope commands theme=get_dropdown<cr>]], silent)
-map('n', '<leader>tg', [[<cmd>Telescope git_files theme=get_dropdown<cr>]], silent)
-map('n', '<leader>tf', [[<cmd>Telescope find_files theme=get_dropdown<cr>]], silent)
-map('n', '<leader>tl', [[<cmd>Telescope live_grep theme=get_dropdown<cr>]], silent)
-map('n', '<leader>ts', [[<cmd>Telescope grep_string theme=get_dropdown<cr>]], silent)
-map('n', '<leader>tt', [[<cmd>Telescope file_browser theme=get_dropdown<cr>]], silent)
+map('n', '<leader>tb', builtin.buffers, silent)
+map('n', '<leader>tc', builtin.commands, silent)
+map('n', '<leader>tg', builtin.git_files, silent)
+map('n', '<leader>tf', builtin.find_files, silent)
+map('n', '<leader>tl', builtin.live_grep, silent)
+map('n', '<leader>ts', builtin.grep_string, silent)
+map('n', '<leader>tt', require('telescope').extensions.file_browser.file_browser, silent)

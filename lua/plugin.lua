@@ -53,6 +53,11 @@ use {
   end
 }
 
+use {
+  'jedrzejboczar/possession.nvim',
+  requires = { 'nvim-lua/plenary.nvim' },
+}
+
 -- Telescope
 use {
   'nvim-telescope/telescope.nvim', tag = '0.1.0',
@@ -154,7 +159,7 @@ use {
   end
 }
 
-use { 
+use {
   'TimUntersberger/neogit',
   requires = {
     'nvim-lua/plenary.nvim',
